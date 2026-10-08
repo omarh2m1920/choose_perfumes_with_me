@@ -1,0 +1,430 @@
+MYRIAM — FULL SOURCE CODE (IPHONE UPDATE V5)
+
+Extract the ZIP and open START-HERE.html in a browser.
+Maybe dodges both mouse movement and touchscreen taps.
+
+========================================================================
+FILE: index.html
+========================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20262c">
+  <title>Myriam — a little scent side quest</title>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="yes_style.css?v=5">
+  <script src="script.js?v=5" defer></script>
+  <script src="yes_script.js?v=5" defer></script>
+</head>
+<body>
+  <main class="invite accepted" id="accepted" tabindex="-1">
+    <header class="topbar"><span class="brand">M<span class="brand-dot">.</span></span><span class="edition">FOR MYRIAM · MISSION ACCEPTED</span><span class="online-dot" aria-hidden="true"></span></header>
+    <div class="layout">
+      <section class="visual party" aria-label="Myriam celebrating the perfume plan">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-wrap"><img class="portrait" src="assets/myriam.png" width="800" height="800" alt="Myriam's illustrated mirror selfie"></div>
+        <span class="floating-tag expert-tag">MISSION ACCEPTED ✨</span><span class="floating-tag gym-tag">my perfume MVP</span>
+        <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✧</span>
+        <div class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </section>
+      <section class="copy" aria-labelledby="success-title">
+        <p class="eyebrow"><span></span> SCENT SIDE QUEST: UNLOCKED</p>
+        <h1 id="success-title">It's a plan,<br><em>Myriam ✨</em></h1>
+        <p class="subtitle">Okay, perfume expert. Send me this:</p>
+        <div class="message-card"><p id="message-text">betbiaa haha wa9teh nemchiw !</p><button id="copy-button" type="button">Copy message <span aria-hidden="true">↗</span></button></div>
+        <p id="copy-status" class="status" role="status" aria-live="polite">Copy it, then send it to me 😌</p>
+        <a class="back-link" href="#invite">← Back</a>
+      </section>
+    </div>
+    <footer class="page-footer"><span>YOU PICK THE SCENT.</span><span aria-hidden="true">✦</span><span>I TRY TO KEEP UP.</span></footer>
+  </main>
+  <main class="invite" id="invite">
+    <header class="topbar"><span class="brand">M<span class="brand-dot">.</span></span><span class="edition">FOR MYRIAM · INVITE 001</span><span class="online-dot" aria-hidden="true"></span></header>
+    <div class="layout">
+      <section class="visual" aria-label="Myriam's animated perfume side quest">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-wrap"><img class="portrait" src="assets/myriam.png" width="800" height="800" alt="Myriam's illustrated mirror selfie"></div>
+        <span class="floating-tag expert-tag">SCENT EXPERT ✨</span>
+        <span class="floating-tag gym-tag">gym buddy → scent buddy</span>
+        <div class="perfume-charm" aria-hidden="true"><svg viewBox="0 0 72 86"><rect x="24" y="5" width="24" height="13" rx="4" fill="currentColor"/><path d="M28 18h16v10H28z" fill="currentColor"/><rect x="12" y="27" width="48" height="53" rx="13" fill="none" stroke="currentColor" stroke-width="3"/><rect x="20" y="46" width="32" height="24" rx="5" fill="currentColor"/><path d="M27 55h18m-14 7h10" stroke="#20262c" stroke-width="2"/></svg></div>
+        <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✧</span>
+      </section>
+      <section class="copy" aria-labelledby="invitation-title">
+        <p class="eyebrow"><span></span> ONE LITTLE SIDE QUEST</p>
+        <h1 id="invitation-title">Myriam,<br>pick a scent<br><em>with me?</em></h1>
+        <p class="subtitle">You collect perfumes. I know nothing.<br>Parfumerie together? 😌</p>
+        <div class="answer-arena" id="answer-arena">
+          <a class="yes-button" id="yes-button" href="#accepted">Let's go <span aria-hidden="true">↗</span></a>
+          <button class="no-button" id="no-button" type="button">Maybe another time</button>
+        </div>
+        <div class="bottom-row"><p id="response-message" class="status" role="status" aria-live="polite">Try catching “Maybe” 😏</p><button class="decline-button" id="decline-button" type="button">No thanks</button></div>
+        <noscript><p><a href="#accepted">Let's go ↗</a></p></noscript>
+      </section>
+    </div>
+    <footer class="page-footer"><span>LESS REPS. MORE SCENT TESTS.</span><span aria-hidden="true">✦</span><span>JUST US + A PARFUMERIE</span></footer>
+  </main>
+</body>
+</html>
+
+
+========================================================================
+FILE: styles.css
+========================================================================
+:root { color-scheme: dark; --bg: #20262c; --panel: #272e35; --ink: #f8f5ef; --muted: #d0d7dd; --lime: #d3f68b; --line: #ffffff18; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 28px; background: #171c21; color: var(--ink); font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif; font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+a { color: var(--lime); }
+.invite { width: min(1080px, 100%); overflow: hidden; padding: 28px 40px 22px; border: 1px solid var(--line); border-radius: 30px; background: radial-gradient(ellipse at 15% 35%, #394037 0, transparent 50%), var(--bg); box-shadow: 0 30px 100px #0005; }
+.topbar, .page-footer, .bottom-row { display: flex; align-items: center; justify-content: space-between; }
+.topbar { padding-bottom: 24px; }
+.brand { font-size: 30px; font-weight: 900; letter-spacing: -3px; }
+.brand-dot { color: var(--lime); }
+.edition { font-size: 12px; letter-spacing: 1.3px; color: var(--muted); }
+.online-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 18px #d3f68550; }
+.layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 30px 0 36px; }
+.visual { position: relative; min-width: 0; aspect-ratio: 1; display: grid; place-items: center; }
+.portrait-wrap { width: 89%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 1px solid #ffffff24; animation: portrait-drift 5s ease-in-out infinite; }
+.portrait { display: block; width: 100%; height: 100%; object-fit: cover; }
+.orbit { position: absolute; width: 97%; height: 97%; border: 1px solid #d3f68b20; border-radius: 50%; pointer-events: none; }
+.orbit-two { width: 106%; height: 106%; border-style: dashed; opacity: .5; animation: orbit-turn 70s linear infinite; }
+.floating-tag { position: absolute; z-index: 2; padding: 12px 16px; border: 1px solid #ffffff20; border-radius: 12px; background: #333c36; font-size: 12px; font-weight: 650; box-shadow: 0 8px 24px #0003; animation: tag-drift 4s ease-in-out infinite; }
+.expert-tag { top: 13%; right: -2%; color: var(--lime); transform: rotate(7deg); letter-spacing: 1px; }
+.gym-tag { left: -1%; bottom: 10%; background: #e6ddcf; color: #282d29; transform: rotate(-6deg); animation-delay: -2s; }
+.perfume-charm { position: absolute; width: 72px; height: 86px; bottom: 9%; right: 0; color: var(--lime); transform: rotate(12deg); animation: bottle-drift 3s ease-in-out infinite; filter: drop-shadow(0 10px 12px #0005); }
+.perfume-charm svg { width: 100%; height: 100%; }
+.spark { position: absolute; color: var(--lime); font-size: 35px; animation: twinkle 2.8s ease-in-out infinite; }
+.spark-one { top: 0; left: 10%; }
+.spark-two { bottom: 0; left: 47%; animation-delay: -1.4s; }
+.copy { min-width: 0; }
+.eyebrow { display: flex; gap: 8px; align-items: center; margin: 0 0 20px; color: var(--lime); font-size: 12px; font-weight: 700; letter-spacing: 1.2px; }
+.eyebrow span { width: 5px; height: 5px; background: var(--lime); border-radius: 50%; }
+h1 { font-size: clamp(38px, 4.8vw, 64px); line-height: 1.1; letter-spacing: -2px; margin: 0; font-weight: 700; }
+h1 em { font-style: normal; color: var(--lime); }
+.subtitle { color: var(--muted); font-size: 17px; line-height: 1.65; margin: 24px 0 20px; }
+.answer-arena { position: relative; height: 210px; width: 100%; }
+.yes-button, .no-button { position: absolute; top: 6px; min-height: 48px; border-radius: 100px; padding: 13px 18px; font-size: 14px; font-weight: 650; line-height: 20px; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.yes-button { left: 0; width: 148px; background: var(--lime); color: #222a21; border: 1px solid var(--lime); transition: box-shadow .2s, background .2s; }
+.yes-button span { margin-left: 18px; font-size: 17px; }
+.yes-button:hover { background: #e2ffb0; box-shadow: 0 0 24px #d3f68b25; }
+.no-button { right: 0; color: var(--muted); background: var(--panel); border: 1px solid #ffffff24; }
+.no-button:hover { border-color: #d3f68b70; }
+.bottom-row { gap: 12px; min-height: 26px; }
+.status { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.decline-button { color: var(--muted); font-size: 13px; background: transparent; border: 0; padding: 12px 0 12px 10px; min-height: 44px; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+.page-footer { padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; letter-spacing: 1px; gap: 12px; }
+.page-footer > span:nth-child(2) { color: var(--lime); font-size: 16px; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-offset: 5px; }
+@keyframes portrait-drift { 50% { transform: translateY(-7px) rotate(1deg); } }
+@keyframes tag-drift { 50% { translate: 0 -6px; } }
+@keyframes bottle-drift { 50% { translate: 0 -9px; rotate: -8deg; } }
+@keyframes twinkle { 50% { opacity: .3; scale: .7; } }
+@keyframes orbit-turn { to { transform: rotate(360deg); } }
+@media (max-width: 800px) {
+  body { padding: 16px; }
+  .invite { padding: 20px 24px; border-radius: 24px; max-width: 480px; }
+  .topbar { padding-bottom: 8px; }
+  .edition { font-size: 11px; letter-spacing: .7px; }
+  .layout { grid-template-columns: 1fr; gap: 22px; padding: 14px 0 22px; }
+  .visual { width: min(270px, 80%); margin: 0 auto; }
+  .floating-tag { font-size: 11px; padding: 9px 11px; }
+  .expert-tag { right: -10%; }
+  .gym-tag { left: -9%; }
+  .perfume-charm { width: 52px; height: 62px; right: -7%; }
+  .spark { font-size: 26px; }
+  h1 { font-size: clamp(38px, 11vw, 50px); letter-spacing: -1.5px; }
+  .eyebrow { margin-bottom: 14px; }
+  .subtitle { margin: 18px 0 14px; font-size: 16px; }
+  .page-footer { font-size: 10px; letter-spacing: .5px; flex-wrap: wrap; }
+}
+@media (max-width: 350px) {
+  body { padding: 10px; }
+  .invite { padding: 16px; }
+  h1 { font-size: 42px; }
+  .yes-button { width: 140px; }
+  .yes-button span { margin-left: 9px; }
+  .no-button { padding-inline: 12px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+.chasing .portrait-wrap { animation: portrait-drift 1.8s ease-in-out infinite; }
+.chasing .perfume-charm { animation-duration: 1.2s; }
+.passed .expert-tag { opacity: .6; }
+
+#accepted { display: none; }
+#accepted:target { display: block; }
+#accepted:target ~ #invite { display: none; }
+@media (max-width: 1050px) and (min-width: 801px), (max-width: 420px) { .no-button { top: 82px; } }
+@media (max-width: 380px) { .page-footer > span:first-child, .page-footer > span:last-child { max-width: 42%; } }
+
+.no-button { touch-action: none; -webkit-user-select: none; user-select: none; }
+
+
+========================================================================
+FILE: script.js
+========================================================================
+(() => {
+  'use strict';
+  const arena = document.getElementById('answer-arena');
+  const yes = document.getElementById('yes-button');
+  const maybe = document.getElementById('no-button');
+  const decline = document.getElementById('decline-button');
+  const status = document.getElementById('response-message');
+  const invite = document.getElementById('invite');
+  if (!arena || !yes || !maybe || !decline) return;
+
+  const jokes = ['Nice try 😏', 'Too slow 😂', 'Catch me first 🏃‍♀️', 'Your cardio for today 💪'];
+  let dodges = 0;
+  let keyboardMode = false;
+  let lastTouch = -Infinity;
+
+  function resetMaybe() {
+    maybe.style.left = '';
+    maybe.style.top = '';
+    maybe.style.right = '';
+  }
+
+  function moveAway(event, force = false, fromTouch = false) {
+    if (arena.hidden || keyboardMode || (!fromTouch && Date.now() - lastTouch < 1000)) return;
+    if (!Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) return;
+    const button = maybe.getBoundingClientRect();
+    const dx = Math.max(button.left - event.clientX, 0, event.clientX - button.right);
+    const dy = Math.max(button.top - event.clientY, 0, event.clientY - button.bottom);
+    if (!force && Math.hypot(dx, dy) > 85) return;
+
+    const bounds = arena.getBoundingClientRect();
+    const yesBounds = yes.getBoundingClientRect();
+    const maxX = Math.max(0, bounds.width - button.width);
+    const maxY = Math.max(0, bounds.height - button.height);
+    let best;
+    for (let col = 0; col <= 12; col++) {
+      for (let row = 0; row <= 8; row++) {
+        const x = maxX * col / 12;
+        const y = maxY * row / 8;
+        const left = bounds.left + x;
+        const top = bounds.top + y;
+        const right = left + button.width;
+        const bottom = top + button.height;
+        if (left < yesBounds.right + 12 && right > yesBounds.left - 12 && top < yesBounds.bottom + 12 && bottom > yesBounds.top - 12) continue;
+        const gapX = Math.max(left - event.clientX, 0, event.clientX - right);
+        const gapY = Math.max(top - event.clientY, 0, event.clientY - bottom);
+        const gap = Math.hypot(gapX, gapY);
+        const distance = Math.hypot(left + button.width / 2 - event.clientX, top + button.height / 2 - event.clientY);
+        const score = gap * 4 + distance;
+        if (!best || score > best.score) best = { x, y, score, gap };
+      }
+    }
+    if (!best || best.gap < 20) return;
+    maybe.style.right = 'auto';
+    maybe.style.left = `${best.x}px`;
+    maybe.style.top = `${best.y}px`;
+    status.textContent = jokes[dodges++ % jokes.length];
+    invite.classList.add('chasing');
+  }
+
+  function pass() {
+    arena.hidden = true;
+    decline.hidden = true;
+    status.textContent = 'All good. See you at the gym 🤝';
+    invite.classList.remove('chasing');
+    invite.classList.add('passed');
+  }
+
+  document.addEventListener('mousemove', event => {
+    keyboardMode = false;
+    moveAway(event);
+  });
+  maybe.addEventListener('mouseenter', event => moveAway(event, true));
+  maybe.addEventListener('mousedown', event => {
+    if (!keyboardMode && event.button === 0 && Date.now() - lastTouch >= 1000) {
+      event.preventDefault();
+      moveAway(event, true);
+    }
+  });
+  function dodgeTouch(event) {
+    if (event.cancelable) event.preventDefault();
+    keyboardMode = false;
+    lastTouch = Date.now();
+    const touch = event.touches[0] || event.changedTouches[0];
+    if (touch) moveAway(touch, event.type === 'touchstart', true);
+  }
+  maybe.addEventListener('touchstart', dodgeTouch, { passive: false });
+  maybe.addEventListener('touchmove', dodgeTouch, { passive: false });
+  maybe.addEventListener('touchend', event => {
+    if (event.cancelable) event.preventDefault();
+    lastTouch = Date.now();
+  }, { passive: false });
+  maybe.addEventListener('click', event => {
+    if (Date.now() - lastTouch < 1000 || event.pointerType === 'touch') {
+      event.preventDefault();
+      return;
+    }
+    if (keyboardMode || event.detail === 0) pass();
+    else {
+      event.preventDefault();
+      moveAway(event, true);
+    }
+  });
+  decline.addEventListener('click', pass);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Tab') keyboardMode = true;
+  });
+  document.addEventListener('touchstart', () => { lastTouch = Date.now(); }, { passive: true });
+  window.addEventListener('resize', resetMaybe);
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#accepted') {
+      const accepted = document.getElementById('accepted');
+      if (accepted) accepted.focus({ preventScroll: true });
+      window.scrollTo(0, 0);
+    }
+  });
+})();
+
+
+========================================================================
+FILE: yes_page.html
+========================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20262c">
+  <title>It's a plan, Myriam ✨</title>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="yes_style.css?v=5">
+  <script src="yes_script.js?v=5" defer></script>
+</head>
+<body>
+  <main class="invite accepted">
+    <header class="topbar"><span class="brand">M<span class="brand-dot">.</span></span><span class="edition">FOR MYRIAM · MISSION ACCEPTED</span><span class="online-dot" aria-hidden="true"></span></header>
+    <div class="layout">
+      <section class="visual party" aria-label="Myriam celebrating the perfume plan">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-wrap"><img class="portrait" src="assets/myriam.png" width="800" height="800" alt="Myriam's illustrated mirror selfie"></div>
+        <span class="floating-tag expert-tag">MISSION ACCEPTED ✨</span><span class="floating-tag gym-tag">my perfume MVP</span>
+        <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✧</span>
+        <div class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </section>
+      <section class="copy" aria-labelledby="success-title">
+        <p class="eyebrow"><span></span> SCENT SIDE QUEST: UNLOCKED</p>
+        <h1 id="success-title">It's a plan,<br><em>Myriam ✨</em></h1>
+        <p class="subtitle">Okay, perfume expert. Send me this:</p>
+        <div class="message-card"><p id="message-text">betbiaa haha wa9teh nemchiw !</p><button id="copy-button" type="button">Copy message <span aria-hidden="true">↗</span></button></div>
+        <p id="copy-status" class="status" role="status" aria-live="polite">Copy it, then send it to me 😌</p>
+        <a class="back-link" href="index.html">← Back</a>
+      </section>
+    </div>
+    <footer class="page-footer"><span>YOU PICK THE SCENT.</span><span aria-hidden="true">✦</span><span>I TRY TO KEEP UP.</span></footer>
+  </main>
+</body>
+</html>
+
+
+========================================================================
+FILE: yes_style.css
+========================================================================
+.message-card { margin: 22px 0 14px; padding: 20px; border: 1px solid #d3f68b35; border-radius: 18px; background: #d3f68b08; }
+.message-card p { margin: 0 0 20px; color: var(--lime); font-size: 20px; line-height: 1.5; font-weight: 650; overflow-wrap: anywhere; user-select: all; }
+#copy-button { width: 100%; min-height: 46px; display: flex; justify-content: space-between; align-items: center; background: var(--lime); color: #222a21; border: 0; border-radius: 10px; padding: 12px 16px; font-size: 14px; font-weight: 700; }
+.back-link { display: inline-block; margin-top: 28px; padding: 8px 0; color: var(--muted); text-decoration: none; font-size: 14px; }
+.party .portrait-wrap { animation: happy-bounce 3s ease-in-out infinite; }
+.confetti { position: absolute; inset: -8%; pointer-events: none; overflow: hidden; border-radius: 40%; }
+.confetti i { position: absolute; top: -15%; left: 10%; width: 5px; height: 12px; background: var(--lime); animation: confetti-fall 4s linear infinite; }
+.confetti i:nth-child(2) { left: 22%; animation-delay: -1.4s; background: #e6ddcf; }
+.confetti i:nth-child(3) { left: 35%; animation-delay: -2.7s; }
+.confetti i:nth-child(4) { left: 46%; animation-delay: -.6s; background: #b4a5d9; }
+.confetti i:nth-child(5) { left: 58%; animation-delay: -3.4s; }
+.confetti i:nth-child(6) { left: 70%; animation-delay: -2s; background: #e6ddcf; }
+.confetti i:nth-child(7) { left: 82%; animation-delay: -3s; background: #b4a5d9; }
+.confetti i:nth-child(8) { left: 92%; animation-delay: -1s; }
+@keyframes confetti-fall { to { top: 115%; transform: rotate(330deg); } }
+@keyframes happy-bounce { 50% { transform: translateY(-10px) rotate(-2deg); } }
+
+
+========================================================================
+FILE: yes_script.js
+========================================================================
+(() => {
+  'use strict';
+  const button = document.getElementById('copy-button');
+  const message = document.getElementById('message-text');
+  const status = document.getElementById('copy-status');
+  if (!button || !message || !status) return;
+  button.addEventListener('click', async () => {
+    try {
+      if (!navigator.clipboard) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(message.textContent);
+      status.textContent = 'Copied! Now send it to me 😌';
+    } catch {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(message);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = 'Message selected. Copy it and send it to me.';
+    }
+  });
+})();
+
+
+========================================================================
+FILE: version.json
+========================================================================
+{
+  "version": "5.0.0",
+  "project": "Myriam's scent side quest",
+  "entry": "START-HERE.html"
+}
+
+
+========================================================================
+FILE: README.md
+========================================================================
+# Myriam — scent side quest (iPhone update)
+
+1. Extract the ZIP completely.
+2. Open `START-HERE.html` in Chrome, Edge, Firefox, or Safari.
+
+That file contains the complete app, including the picture, styles, and scripts. It works offline. Open it in a normal browser tab; file-preview panes may block JavaScript.
+
+## Behavior
+
+- “Let's go” opens the acceptance screen inside the same file using a native link. It also works if JavaScript is disabled.
+- “Maybe another time” jumps away whenever the mouse gets near it, including with reduced-motion enabled. Decorative animations respect reduced-motion preferences.
+- On iPhone and other touchscreens, Maybe jumps on finger-down and during a nearby finger drag. It cancels the resulting tap instead of accepting it. Keyboard users can activate Maybe normally. “No thanks” is always available.
+- The accepted message is `betbiaa haha wa9teh nemchiw !`. Copy it and send it manually; the app does not send or record anything.
+
+## Editable files
+
+`index.html`, `styles.css`, `script.js`, `yes_style.css`, `yes_script.js`, and `assets/myriam.png` are the editable source. `yes_page.html` also works as a separate acceptance page. `version.json` contains the project version.
+
+After editing the source, run `python build_portable.py` to regenerate `START-HERE.html`. Alternatively, upload the entire folder and use `index.html` directly.
+
+
+========================================================================
+FILE: build_portable.py
+========================================================================
+from pathlib import Path
+import base64
+
+root = Path(__file__).resolve().parent
+html = (root / 'index.html').read_text(encoding='utf-8')
+for name in ['styles.css', 'yes_style.css']:
+    html = html.replace(f'<link rel="stylesheet" href="{name}?v=5">', '<style>\n' + (root / name).read_text(encoding='utf-8') + '\n</style>')
+scripts = []
+for name in ['script.js', 'yes_script.js']:
+    html = html.replace(f'<script src="{name}?v=5" defer></script>', '')
+    scripts.append('<script>\n' + (root / name).read_text(encoding='utf-8') + '\n</script>')
+image = base64.b64encode((root / 'assets/myriam.png').read_bytes()).decode('ascii')
+html = html.replace('src="assets/myriam.png"', 'src="data:image/png;base64,' + image + '"')
+html = html.replace('</body>', '\n'.join(scripts) + '\n</body>')
+(root / 'START-HERE.html').write_text(html, encoding='utf-8')
+print('Built START-HERE.html with all styles, scripts, and pictures embedded.')
+
+

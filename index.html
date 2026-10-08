@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20262c">
+  <title>Myriam — a little scent side quest</title>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="yes_style.css?v=5">
+  <script src="script.js?v=5" defer></script>
+  <script src="yes_script.js?v=5" defer></script>
+</head>
+<body>
+  <main class="invite accepted" id="accepted" tabindex="-1">
+    <header class="topbar"><span class="brand">M<span class="brand-dot">.</span></span><span class="edition">FOR MYRIAM · MISSION ACCEPTED</span><span class="online-dot" aria-hidden="true"></span></header>
+    <div class="layout">
+      <section class="visual party" aria-label="Myriam celebrating the perfume plan">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-wrap"><img class="portrait" src="assets/myriam.png" width="800" height="800" alt="Myriam's illustrated mirror selfie"></div>
+        <span class="floating-tag expert-tag">MISSION ACCEPTED ✨</span><span class="floating-tag gym-tag">my perfume MVP</span>
+        <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✧</span>
+        <div class="confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </section>
+      <section class="copy" aria-labelledby="success-title">
+        <p class="eyebrow"><span></span> SCENT SIDE QUEST: UNLOCKED</p>
+        <h1 id="success-title">It's a plan,<br><em>Myriam ✨</em></h1>
+        <p class="subtitle">Okay, perfume expert. Send me this:</p>
+        <div class="message-card"><p id="message-text">betbiaa haha wa9teh nemchiw !</p><button id="copy-button" type="button">Copy message <span aria-hidden="true">↗</span></button></div>
+        <p id="copy-status" class="status" role="status" aria-live="polite">Copy it, then send it to me 😌</p>
+        <a class="back-link" href="#invite">← Back</a>
+      </section>
+    </div>
+    <footer class="page-footer"><span>YOU PICK THE SCENT.</span><span aria-hidden="true">✦</span><span>I TRY TO KEEP UP.</span></footer>
+  </main>
+  <main class="invite" id="invite">
+    <header class="topbar"><span class="brand">M<span class="brand-dot">.</span></span><span class="edition">FOR MYRIAM · INVITE 001</span><span class="online-dot" aria-hidden="true"></span></header>
+    <div class="layout">
+      <section class="visual" aria-label="Myriam's animated perfume side quest">
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="portrait-wrap"><img class="portrait" src="assets/myriam.png" width="800" height="800" alt="Myriam's illustrated mirror selfie"></div>
+        <span class="floating-tag expert-tag">SCENT EXPERT ✨</span>
+        <span class="floating-tag gym-tag">gym buddy → scent buddy</span>
+        <div class="perfume-charm" aria-hidden="true"><svg viewBox="0 0 72 86"><rect x="24" y="5" width="24" height="13" rx="4" fill="currentColor"/><path d="M28 18h16v10H28z" fill="currentColor"/><rect x="12" y="27" width="48" height="53" rx="13" fill="none" stroke="currentColor" stroke-width="3"/><rect x="20" y="46" width="32" height="24" rx="5" fill="currentColor"/><path d="M27 55h18m-14 7h10" stroke="#20262c" stroke-width="2"/></svg></div>
+        <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✧</span>
+      </section>
+      <section class="copy" aria-labelledby="invitation-title">
+        <p class="eyebrow"><span></span> ONE LITTLE SIDE QUEST</p>
+        <h1 id="invitation-title">Myriam,<br>pick a scent<br><em>with me?</em></h1>
+        <p class="subtitle">You collect perfumes. I know nothing.<br>Parfumerie together? 😌</p>
+        <div class="answer-arena" id="answer-arena">
+          <a class="yes-button" id="yes-button" href="#accepted">Let's go <span aria-hidden="true">↗</span></a>
+          <button class="no-button" id="no-button" type="button">Maybe another time</button>
+        </div>
+        <div class="bottom-row"><p id="response-message" class="status" role="status" aria-live="polite">Try catching “Maybe” 😏</p><button class="decline-button" id="decline-button" type="button">No thanks</button></div>
+        <noscript><p><a href="#accepted">Let's go ↗</a></p></noscript>
+      </section>
+    </div>
+    <footer class="page-footer"><span>LESS REPS. MORE SCENT TESTS.</span><span aria-hidden="true">✦</span><span>JUST US + A PARFUMERIE</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.message-card { margin: 22px 0 14px; padding: 20px; border: 1px solid #d3f68b35; border-radius: 18px; background: #d3f68b08; }
+.message-card p { margin: 0 0 20px; color: var(--lime); font-size: 20px; line-height: 1.5; font-weight: 650; overflow-wrap: anywhere; user-select: all; }
+#copy-button { width: 100%; min-height: 46px; display: flex; justify-content: space-between; align-items: center; background: var(--lime); color: #222a21; border: 0; border-radius: 10px; padding: 12px 16px; font-size: 14px; font-weight: 700; }
+.back-link { display: inline-block; margin-top: 28px; padding: 8px 0; color: var(--muted); text-decoration: none; font-size: 14px; }
+.party .portrait-wrap { animation: happy-bounce 3s ease-in-out infinite; }
+.confetti { position: absolute; inset: -8%; pointer-events: none; overflow: hidden; border-radius: 40%; }
+.confetti i { position: absolute; top: -15%; left: 10%; width: 5px; height: 12px; background: var(--lime); animation: confetti-fall 4s linear infinite; }
+.confetti i:nth-child(2) { left: 22%; animation-delay: -1.4s; background: #e6ddcf; }
+.confetti i:nth-child(3) { left: 35%; animation-delay: -2.7s; }
+.confetti i:nth-child(4) { left: 46%; animation-delay: -.6s; background: #b4a5d9; }
+.confetti i:nth-child(5) { left: 58%; animation-delay: -3.4s; }
+.confetti i:nth-child(6) { left: 70%; animation-delay: -2s; background: #e6ddcf; }
+.confetti i:nth-child(7) { left: 82%; animation-delay: -3s; background: #b4a5d9; }
+.confetti i:nth-child(8) { left: 92%; animation-delay: -1s; }
+@keyframes confetti-fall { to { top: 115%; transform: rotate(330deg); } }
+@keyframes happy-bounce { 50% { transform: translateY(-10px) rotate(-2deg); } }
